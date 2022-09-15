@@ -1,0 +1,50 @@
+yarn init
+
+yarn add --dev hardhat
+
+yarn hardhat
+
+yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+
+>> Testing
+> add Test Folders
+> add Shell.test.js
+yarn hardhat test
+
+>> Deployment
+yarn add --dev hardhat-deploy
+> add helper-hardhat-config.js
+
+yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
+> add to hardhat.config.js
+>    require("hardhat-deploy");
+
+>> Environment
+yarn add --dev dotenv
+> add .env file
+
+>> Verification
+yarn add --dev @nomiclabs/hardhat-etherscan 
+> add helper-functions.js
+
+>> Gas Reporter
+yarn add --dev hardhat-gas-reporter
+
+yarn hardhat deploy
+
+>> PRETTIER
+yarn add --dev prettier prettier-plugin-solidity
+> add .prettierrc & .prettierignore
+
+>> AAVE PROTOCOL
+yarn add --dev @openzeppelin/contracts   // dependency??
+yarn add --dev @aave/protocol-v2
+
+
+**** Verify with parameters
+yarn hardhat verify --contract "contracts/OurToken.sol:OurToken" --network rinkeby 0x066C886B568819a806F24d657e579eAA8976DD40 "1000000000000000000"
+
+
+
+
+
